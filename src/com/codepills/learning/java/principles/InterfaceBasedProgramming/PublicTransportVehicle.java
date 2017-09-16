@@ -4,11 +4,15 @@ package com.codepills.learning.java.principles.InterfaceBasedProgramming;
  * 
  */
 
+/** Simple interface
+ * 
+ */
 interface TransportProperties {
 	public void move();
 }
-
-
+/** Simple class
+ * 
+ */
 class Vehicle {
 	public void car(){
 		System.out.println("This is car");
@@ -23,7 +27,9 @@ class Vehicle {
 	}
 }
 
-
+/** Class extending simple (super) class and implementing simple interface.
+ * 
+ */
 public class PublicTransportVehicle extends Vehicle implements TransportProperties {
 		
 	public void car() {
@@ -45,12 +51,15 @@ public class PublicTransportVehicle extends Vehicle implements TransportProperti
 		TransportProperties ibp = new PublicTransportVehicle();
 		
 		/** Try to guess the results before you run the program.
-		 * 
+		 *  If you are using IDE, try to uncomment commented lines.
 		 */
 		vehicle.car();
 		car.car();
 		car.car("FORD");
 		publicTransport.car();
+		// publicTransport.car("FORD");
 		ibp.move();
+		// ibp.car()
+		// ibp.car("FORD")
 	}
 }
